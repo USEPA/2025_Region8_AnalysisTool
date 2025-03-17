@@ -1,5 +1,17 @@
-.Rproj.user
+# history files
 .Rhistory
+.Rapp.history
+
+# session data files
 .RData
+.RDataTmp
+
+# user-specific files
 .Ruserdata
-2025_Region8_AnalysisTool.Rproj
+
+# r cache
+*_cache/
+
+# r project file
+.Rproj.user
+Region8WQP.Rproj

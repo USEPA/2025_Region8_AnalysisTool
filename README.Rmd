@@ -1,9 +1,23 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+  knitr::opts_chunk$set(
+    collapse = TRUE,
+    comment = "#>",
+    fig.path = "man/figures/README-",
+    out.width = "100%"
+)
+```
+
 # 2025_Region8_AnalysisTool
 
 R Shiny Application (under active development) designed to assist EPA and Region 8 states and tribal nations with accessing, analyzing and visualizing Water Quality Portal (WQP) data.  
 
 This R Shiny application will include and expand on the functionality included in the 2024_Region8_AnalysisTool (https://github.com/USEPA/2024_Region8_AnalysisTool). Additionally, this version of the tool is being redesigned/rebuilt using the Golem Framework. 
-
 
 ## Open-Source Code Policy
 
@@ -26,6 +40,7 @@ This United States Environmental Protection Agency (EPA) GitHub project code is 
 # `{Region8WQP}`
 
 <!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
 ## Installation
@@ -52,21 +67,18 @@ This README has been compiled on the
 
 ``` r
 Sys.time()
-#> [1] "2025-03-12 14:48:39 CST"
 ```
 
 Here are the tests results and package coverage:
 
-``` r
+```{r, error = TRUE}
 devtools::check(quiet = TRUE)
-#> ══ Documenting ═════════════════════════════════════════════════════════════════
-#> ℹ Installed roxygen2 version (7.3.2) doesn't match required (7.1.1)
-#> ✖ `check()` will not re-document this package
-#> ── R CMD check results ────────────────────────────── Region8WQP 0.0.0.9000 ────
-#> Duration: 18.8s
-#> 
-#> ❯ checking for future file timestamps ... NOTE
-#>   unable to verify current time
-#> 
-#> 0 errors ✔ | 0 warnings ✔ | 1 note ✖
+```
+
+```{r echo = FALSE}
+unloadNamespace("Region8WQP")
+```
+
+```{r, error = TRUE}
+covr::package_coverage()
 ```
