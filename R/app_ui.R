@@ -55,6 +55,11 @@ app_ui <- function(request) {
             text = "Data Download",
             tabName = "Download",
             icon = icon("pen")
+          ),
+          menuItem(
+            text = "Join AU",
+            tabName = "AU",
+            icon = icon("pen")
           )
         )
       ),
@@ -66,6 +71,7 @@ app_ui <- function(request) {
 
         # Main content tabs
         tabItems(
+          # The Download tab
           tabItem(
             tabName = "Download",
             h2("Data Download"),
@@ -82,6 +88,12 @@ app_ui <- function(request) {
             fluidRow(
               column(width = 12, mod_downloadHandlersUI("download_handlers"))
             )
+          ),
+          # The Join AU tab
+          tabItem(
+            tabName = "AU",
+            h2("Join Sites to the Assessment Units"),
+
           )
         )
       )

@@ -11,7 +11,7 @@
 #' @importFrom shiny NS tagList
 
 # UI function
-mapUI <- function(id) {
+mod_mapUI <- function(id) {
   ns <- NS(id)
 
   tagList(
@@ -24,7 +24,7 @@ mapUI <- function(id) {
 #' @noRd
 
 # Server function
-mapServer <- function(id, map_type, data = NULL, bounds = NULL) {
+mod_mapServer <- function(id, map_type, data = NULL, bounds = NULL) {
   moduleServer(id, function(input, output, session) {
 
     # Initialize map

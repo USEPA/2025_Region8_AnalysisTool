@@ -47,7 +47,7 @@ mod_areaSelectionUI <- function(id) {
           column(
             width = 8,
             strong("Select the HUC8 based on the map or the dropdown menu"),
-            mapUI(ns("HUC8map"))
+            mod_mapUI(ns("HUC8map"))
           ),
           column(
             width = 8,
@@ -63,7 +63,7 @@ mod_areaSelectionUI <- function(id) {
           column(
             width = 6,
             strong("Provide the coordinates by drawing a rectangle on the map or type in the values"),
-            mapUI(ns("BBox_map"))
+            mod_mapUI(ns("BBox_map"))
           ),
           column(
             width = 6,
@@ -155,8 +155,8 @@ mod_areaSelectionServer <- function(id, Region8_simple, Region8_out_simple, HUC8
     })
 
     # Initialize map modules
-    huc_map_events <- mapServer("HUC8map", "HUC8", data = HUC8_dat)
-    bbox_map_events <- mapServer("BBox_map", "BBox")
+    huc_map_events <- mod_mapServer("HUC8map", "HUC8", data = HUC8_dat)
+    bbox_map_events <- mod_mapServer("BBox_map", "BBox")
 
     # Update HUC selection based on map clicks
     observe({
