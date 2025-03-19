@@ -10,7 +10,7 @@
 #'
 #' @importFrom shiny NS tagList
 
-downloadHandlersUI <- function(id) {
+mod_downloadHandlersUI <- function(id) {
   ns <- NS(id)
 
   box(
@@ -27,7 +27,7 @@ downloadHandlersUI <- function(id) {
 #'
 #' @noRd
 
-downloadHandlersServer <- function(id, processed_data, reset_trigger) {
+mod_downloadHandlersServer <- function(id, processed_data, reset_trigger) {
   moduleServer(id, function(input, output, session) {
     # Download handler for raw data
     output$data_download <- downloadHandler(

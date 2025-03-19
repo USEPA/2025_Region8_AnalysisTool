@@ -70,17 +70,17 @@ app_ui <- function(request) {
             tabName = "Download",
             h2("Data Download"),
             fluidRow(
-              column(width = 12, areaSelectionUI("area"))
+              column(width = 12, mod_areaSelectionUI("area"))
             ),
             fluidRow(
-              column(width = 12, parameterSelectionUI("params", parameter_names))
+              column(width = 12, mod_parameterSelectionUI("params", parameter_names))
             ),
             fluidRow(
-              column(width = 12, dataDownloadUI("download"))
+              column(width = 12, mod_dataDownloadUI("download"))
             ),
             uiOutput("summary_section"),
             fluidRow(
-              column(width = 12, downloadHandlersUI("download_handlers"))
+              column(width = 12, mod_downloadHandlersUI("download_handlers"))
             )
           )
         )

@@ -9,7 +9,7 @@ app_server <- function(input, output, session) {
   reset_trigger <- reactiveVal(0)
 
   # Initialize modules
-  area_selection <- areaSelectionServer(
+  area_selection <- mod_areaSelectionServer(
     "area",
     Region8_simple,
     Region8_out_simple,
@@ -18,14 +18,14 @@ app_server <- function(input, output, session) {
     reset_trigger
   )
 
-  param_selection <- parameterSelectionServer(
+  param_selection <- mod_parameterSelectionServer(
     "params",
     parameter_names,
     reset_trigger
   )
 
   # Initialize data download module
-  download_results <- dataDownloadServer(
+  download_results <- mod_dataDownloadServer(
     "download",
     area_selection$info,
     area_selection$valid,
@@ -39,22 +39,22 @@ app_server <- function(input, output, session) {
   )
 
   # Process data with TADA when available
-  processed_data <- tadaProcessingServer("tada_process", download_results)
+  processed_data <- mod_tadaProcessingServer("tada_process", download_results)
 
   # Conditionally show data summary UI when data is available
   observe({
     req(processed_data$WQP_dat2)
 
     output$summary_section <- renderUI({
-      dataSummaryUI("data_summary")
+      mod_dataSummaryUI("data_summary")
     })
 
     # Initialize data summary module
-    dataSummaryServer("data_summary", processed_data, count_fun)
+    mod_dataSummaryServer("data_summary", processed_data, count_fun)
   })
 
   # Initialize download handlers
-  downloadHandlersServer("download_handlers", processed_data, reset_trigger)
+  mod_downloadHandlersServer("download_handlers", processed_data, reset_trigger)
 
   # Show/hide download buttons based on data availability
   observe({

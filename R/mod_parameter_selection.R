@@ -10,7 +10,7 @@
 #'
 #' @importFrom shiny NS tagList
 
-parameterSelectionUI <- function(id, parameter_names = parameter_names) {
+mod_parameterSelectionUI <- function(id, parameter_names = parameter_names) {
   ns <- NS(id)
 
   box(
@@ -66,7 +66,7 @@ parameterSelectionUI <- function(id, parameter_names = parameter_names) {
 #'
 #' @noRd
 
-parameterSelectionServer <- function(id, parameter_names, reset_trigger = NULL) {
+mod_parameterSelectionServer <- function(id, parameter_names, reset_trigger = NULL) {
   moduleServer(id, function(input, output, session) {
     # Update parameter list based on group selection
     par_value <- reactiveValues(variable = NULL)

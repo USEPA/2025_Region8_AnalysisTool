@@ -10,7 +10,7 @@
 #'
 #' @importFrom shiny NS tagList
 
-dataSummaryUI <- function(id) {
+mod_dataSummaryUI <- function(id) {
   ns <- NS(id)
 
   tagList(
@@ -54,7 +54,7 @@ dataSummaryUI <- function(id) {
 #'
 #' @noRd
 
-dataSummaryServer <- function(id, processed_data, count_fun) {
+mod_dataSummaryServer <- function(id, processed_data, count_fun) {
   moduleServer(id, function(input, output, session) {
     # Display basic data information
     output$Date_Info <- renderText({

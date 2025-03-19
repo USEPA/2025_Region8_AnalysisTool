@@ -10,7 +10,7 @@
 #'
 #' @importFrom shiny NS tagList
 
-tadaProcessingServer <- function(id, raw_data) {
+mod_tadaProcessingServer <- function(id, raw_data) {
   moduleServer(id, function(input, output, session) {
     # Reactive values to hold processed data at different stages
     processed_data <- reactiveValues(
