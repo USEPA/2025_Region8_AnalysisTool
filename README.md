@@ -1,9 +1,6 @@
 # 2025_Region8_AnalysisTool
 
-R Shiny Application (under active development) designed to assist EPA and Region 8 states and tribal nations with accessing, analyzing and visualizing Water Quality Portal (WQP) data.  
-
-This R Shiny application will include and expand on the functionality included in the 2024_Region8_AnalysisTool (https://github.com/USEPA/2024_Region8_AnalysisTool). Additionally, this version of the tool is being redesigned/rebuilt using the Golem Framework. 
-
+R Shiny Application designed to assist EPA and Region 8 states and tribal nations with accessing, analyzing and visualizing Water Quality Portal (WQP) data. This R Shiny application expands on the functionality included in the 2024_Region8_AnalysisTool (https://github.com/USEPA/2024_Region8_AnalysisTool). Additionally, this version of the tool is being redesigned/rebuilt using the Golem Framework. 
 
 ## Open-Source Code Policy
 
@@ -20,53 +17,3 @@ All contributions to this project will be released under the CCO-1.0 license fil
 ## Disclaimer
 
 This United States Environmental Protection Agency (EPA) GitHub project code is provided on an "as is" basis and the user assumes responsibility for its use. EPA has relinquished control of the information and no longer has responsibility to protect the integrity, confidentiality, or availability of the information. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by EPA. The EPA seal and logo shall not be used in any manner to imply endorsement of any commercial product or activity by EPA or the United States Government.
-
-## Tool Use
-
-# `{Region8WQP}`
-
-<!-- badges: start -->
-<!-- badges: end -->
-
-## Installation
-
-You can install the development version of `{Region8WQP}` like so:
-
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
-```
-
-## Run
-
-You can launch the application by running:
-
-``` r
-Region8WQP::run_app()
-```
-
-## About
-
-You are reading the doc about version : 0.0.0.9000
-
-This README has been compiled on the
-
-``` r
-Sys.time()
-#> [1] "2025-03-12 14:48:39 CST"
-```
-
-Here are the tests results and package coverage:
-
-``` r
-devtools::check(quiet = TRUE)
-#> ══ Documenting ═════════════════════════════════════════════════════════════════
-#> ℹ Installed roxygen2 version (7.3.2) doesn't match required (7.1.1)
-#> ✖ `check()` will not re-document this package
-#> ── R CMD check results ────────────────────────────── Region8WQP 0.0.0.9000 ────
-#> Duration: 18.8s
-#> 
-#> ❯ checking for future file timestamps ... NOTE
-#>   unable to verify current time
-#> 
-#> 0 errors ✔ | 0 warnings ✔ | 1 note ✖
-```
